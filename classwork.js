@@ -127,3 +127,79 @@
 // )
 // ()
 
+
+
+
+
+
+// console.log(multiplicationTable(3));
+// [
+//   [1, 2, 3],
+//   [2, 4, 6],
+//   [3, 6, 9]
+// ]
+
+
+// Task 37
+
+// function rotateArray(arr, k) {
+//    for (let i = 0; i < k; i++) {
+//   arr.unshift(arr.pop())
+
+//    }
+
+//    return arr
+// }
+
+// console.log(rotateArray([1, 2, 3, 4, 5], 2)); // [4, 5, 1, 2, 3]
+
+
+
+
+// Task 39
+
+function multiplicationTable(n) {
+    let result = []
+
+    for (let i = 1; i <= n; i++) {
+        let new_arr = []
+        for (let g = 1; g <= n; g++) {
+            new_arr.push(i * g)
+        }
+        result.push(new_arr)
+    }
+    return result
+}
+
+// Task 40
+
+function splitArrayInHalf(arr) {
+    let n = Math.ceil(arr.length / 2)
+    let new_arr = [arr.slice(0, n), arr.slice(n)]
+    return new_arr
+}
+
+// console.log(splitArrayInHalf([1, 2, 3, 4, 5])); // [[1, 2, 3], [4, 5]]
+
+
+
+// Task 41
+
+function swapDiagonals(matrix) {
+    let arr = []
+    for (let i = 0; i < matrix.length; i++) {
+        if (i % 2 == 0) {
+            arr.push(matrix[i].reverse())
+        }
+        else {
+            arr.push(matrix[i])
+        }
+    }
+    return arr
+}
+
+// console.log(swapDiagonals([
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ]));
