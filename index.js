@@ -1,6 +1,5 @@
 
-
-// Task 1
+// Task 35
 
 function longestName(arr) {
     let max_word = arr[0]
@@ -14,7 +13,7 @@ function longestName(arr) {
 
 // console.log(longestName(["Alice", "Bob", "Christina", "David"])); // "Christina"
 
-// Task 2
+// Task 36
 
 function removeConsecutiveDuplicates(str) {
     let result = []
@@ -29,20 +28,21 @@ function removeConsecutiveDuplicates(str) {
 
 // console.log(removeConsecutiveDuplicates("aaabbbcccaaa")); // "abc"
 
-// Task 3
+// Task 37
 
 function rotateArray(arr, k) {
-    let new_arr = []
-    arr.forEach((item) => {
-        new_arr.push(arr.splice(item, 1, item))
-
-    });
-    // return new_arr
+    for (let i = 0; i < k; i++) {
+      arr.unshift(arr.pop())
+        
+    }
+    return arr
 }
 
 // console.log(rotateArray([1, 2, 3, 4, 5], 2)); // [4, 5, 1, 2, 3]
 
-// Task 4
+
+
+// Task 38
 
 function flattenArray(arr) {
     let result = arr.flat(Infinity)
@@ -52,7 +52,7 @@ function flattenArray(arr) {
 // console.log(flattenArray([[1, 2], [3, 4], [5]])); // [1, 2, 3, 4, 5]
 
 
-// Task 5
+// Task 39
 
 function multiplicationTable(n) {
     let result = []
@@ -68,14 +68,14 @@ function multiplicationTable(n) {
     return result
 }
 
-console.log(multiplicationTable(3));
+// console.log(multiplicationTable(3));
 // [
 //   [1, 2, 3],
 //   [2, 4, 6],
 //   [3, 6, 9]
 // ]
 
-// Task 6
+// Task 40
 
 function splitArrayInHalf(arr) {
     let n = Math.ceil(arr.length / 2)
@@ -84,9 +84,38 @@ function splitArrayInHalf(arr) {
     return new_arr
 }
 
-console.log(splitArrayInHalf([1, 2, 3, 4, 5])); // [[1, 2, 3], [4, 5]]
+// console.log(splitArrayInHalf([1, 2, 3, 4, 5])); // [[1, 2, 3], [4, 5]]
 
-// Task 7
+
+
+// Task 41
+
+function swapDiagonals(matrix) {
+
+    let arr = []
+    for (let i = 0; i < matrix.length; i++) {
+       if (i % 2 == 0) {
+        arr.push(matrix[i].reverse())
+       } 
+        else{
+            arr.push(matrix[i])
+        }
+    }
+return arr
+}
+
+console.log(swapDiagonals([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]));
+// [
+//   [3, 2, 1],
+//   [4, 5, 6],
+//   [9, 8, 7]
+// ]
+
+// Task 42
 
 function findGCD(arr) {
     let new_arr = []
@@ -116,7 +145,7 @@ function findGCD(arr) {
     return max
 }
 
-console.log(findGCD([24, 36, 48])); // 12
+// console.log(findGCD([24, 36, 48])); // 12
 // console.log(findGCD([7, 14, 21]));  // 7
 
 
